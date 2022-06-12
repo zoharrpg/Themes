@@ -53,19 +53,23 @@
     </div>
   </div>
 
-  {% if bibdata.abstract %}
-  <p class="font-bold">Abstract</p>
-  <article class="prose prose-indigo prose max-w-3xl pb-4">{{ bibdata.abstract | safe }} </article>
-  {% endif %}
+  <article class="prose prose-indigo prose max-w-3xl">
+    {{ page.content | safe }}
+  </article>
 
-  {% if plaintex %}
+  <!-- {% if bibdata.abstract %}
+  <p class="font-bold"></p>
+  <article class="prose prose-indigo prose max-w-3xl pb-4">{{ bibdata.abstract | safe }} </article>
+  {% endif %} -->
+
+  <!-- {% if plaintex %}
   <div>
     <p class="font-bold">Bibtex</p>
     <div class="prose prose-indigo pb-4">
       <pre ><code class="select-all">{{ plaintex | safe }}</code></pre>
     </div>
   </div>
-  {% endif %}
+  {% endif %} -->
 
 </div>
 {% endblock content %}
